@@ -26,7 +26,7 @@ body{margin-bottom: 30px;}
 /*布局模块 layout*/
 
 #header {height: 30px; border-radius: 0 0 6px 6px;}
-#nav {height: 100px;background: yellow}
+#nav {height: 100px;position: relative;}
 #search{width: 958px;height: 114px; margin: 0 auto 10px;}
 #search .bar{}
 
@@ -65,16 +65,16 @@ body{margin-bottom: 30px;}
 
 */
 #header .link {float: right;padding-right: 20px; line-height: 30px;color: #d5d5d5;font-size: 13px;word-spacing: 4px;}
-#header .link a{color: #666 font-size: 13px;background: url(../img/header_link_bg.gif) no-repeat  0 3px;padding-left: 20px;}
+#header .link a{color: #666; font-size: 13px;background: url(../img/header_link_bg.gif) no-repeat  0 3px;padding-left: 20px;}
 #header .link a:hover{text-decoration: underline;}
 #header .link .icon1{background-position: 0 3px;}
 /*hahaha*/
 #header .link .icon2{background-position: 0 -27px;}
 
-
-
-
-
-
-
-
+#nav ul {position: absolute;top: 10px;}
+#nav li {list-style: none;float: left;}
+#nav li a{display: block; width: 66px; float: left;padding-top: 50px;font-size: 13px;
+	background:url(../img/)}
+#nav .nav_1{left: 11px;}
+#nav .nav_2{right: 11px;}
+#nav h1 {width: 223px; height: 62px; margin: 0 auto;position: relative; top: 10px;}
