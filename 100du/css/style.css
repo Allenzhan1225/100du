@@ -23,6 +23,13 @@ body{margin-bottom: 30px;}
 
 #header, #nav, .content {width: 960px; margin: 0 auto;}
 #search, .section, .ad_border, #footer ,.side_section{border: 1px solid #dbdbdb;border-radius:6px;}
+
+/*三角型 transparent  透明*/
+.triangle_up,.triangle_down_red,.triangle_down_gray{position:absolute; width: 0;height: 0;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;_border-left:4px solid #fff;_border-right: 4px solid #fff;}
+.triangle_up{border-bottom: 4px solid #ca0309;}
+.triangle_down_red{border-top: 4px solid #ca0309;}
+.triangle_down_gray{border-top: 4px solid #CCC;}
+
 /*布局模块 layout*/
 
 #header {height: 30px; border-radius: 0 0 6px 6px;}
@@ -33,13 +40,13 @@ body{margin-bottom: 30px;}
 
 
 .mian{width: 710px;}
-.section{width: 318px; height: 200px;/*33*/ padding: 0 15px; margin-bottom: 10px;}
-.options{width: 350px; height: 200px;/*33*/ }
+.section{width: 318px; padding: 0 15px; margin-bottom: 10px;}
+.options{width: 350px;  }
 .main_ad{border-radius: 6px;overflow: hidden;margin-bottom: 10px;}
 
 
 .side{width:240px;}
-.side_section{height: 100px; margin-bottom: 10px; padding: 0 12px;}
+.side_section{ margin-bottom: 10px; padding: 0 12px;}
 .side_ad{border-radius: 6px; margin-bottom: 10px; overflow: hidden;}
 .ad_border{width: 238px; overflow: hidden; margin-bottom: 10px;}
 #footer{width: 958px;height: 78px; margin: 0 auto;background: #f9f9f9;}
@@ -48,9 +55,13 @@ body{margin-bottom: 30px;}
 
 /*内部布局*/
 .options .nav{height: 34px;}
-.options .nav li{list-style: none; width: 172px; height: 33px; border: 1px solid #dbdbdb; border-bottom: none; border-radius: 6px 6px 0 0;z-index: 20;background: #fff}
+.options .nav li{position: relative; list-style: none; width: 172px; height: 33px; line-height: 33px;font-size: 13px;text-align: center; border: 1px solid #dbdbdb; border-bottom: none; border-radius: 6px 6px 0 0;z-index: 20;background: #fff}
 .options .nav .active {width: 172px;height: 34px;}
-.options .con{width: 348px;border: 1px solid #dbdbdb; border-radius:0 0 6px 6px; height: 80px;z-index: 1;}
+.options .nav  strong{color:  #cc0d13; ;}
+.options .nav  span{color: #000;}
+.options .nav  .triangle_down_red {top: 14px;right: 6px;}
+.options .nav  .triangle_down_gray {top: 14px;right: 6px;}
+.options .con{width: 318px;padding: 0 15px; border: 1px solid #dbdbdb; border-radius:0 0 6px 6px; z-index: 1;}
 
 /*父元素有高度 就可以不用亲浮动*/
 #header .city{float: left;padding-left: 20px; line-height: 30px;font-size: 13px;}
@@ -113,12 +124,72 @@ body{margin-bottom: 30px;}
 #search  .search_info{position: absolute;width: 163px;height: 122px;background:url(../img/search_img.png) no-repeat; left:32px; top:-3px; z-index:2;}
 
 #search .from{position: absolute;z-index: 3; top: 40px;left: 226px;}
+/*box-shadow :  inset  表示内阴影 默认外阴影*/
 #search .txt{border-radius: 3px; width: 380px; height: 22px;padding: 0 12px; border: none; background: #fff1ef;margin-right: 8px;font-size:12px; font-family:'微软雅黑'; color:#ea7a7a; box-shadow:inset 2px 2px 3px rgba(0,0,0,0.25); }
 #search .btn{background: url(../img/search_img.png) no-repeat -163px 0; width: 63px; height: 26px; border:none;}
 
 #search .key_text { width:206px; color:#fff; line-height:18px; position:absolute; top:30px; right:36px; font-size: 12px;}
 #search .key_text a { color:#fff; }
 #search .key_text a:hover { text-decoration:underline; }
+
+
+
+#search .update {position: absolute; bottom: 0; left:226px;width: 405px; height: 30px;background: url(../img/search_img.png) no-repeat -226px 8px;}
+#search .update .wrap {width: 336px; height: 30px;overflow: hidden; position: relative;left: 60px;}
+#search .update ul{width: 336px;position: absolute;top: 0px; left: 0px;}
+#search .update li{list-style: none; font-size: 13px; width: 336px; height: 30px; line-height: 30px;}
+#search .update a{color: black;}
+#search .update a:hover{ text-decoration: underline;}
+#search .update strong{color: red;}
+#search .update span{color: #999;}
+#search .triangle_up{top: 8px; right: 0px; }
+#search .triangle_down_red{top: 17px; right: 0px;}
+
+
+/**/
+.section .video_title {height: 42px; line-height: 42px; background: url(../img/video_bg.gif) no-repeat 105px 10px;font-size:18px; font-family:arial; color:#d90000; font-weight:normal; position:relative;}
+.section .video {margin-bottom:13px; }
+.section .video_list {padding-left: 75px;overflow: hidden;background: url(../img/video_bg.gif) no-repeat 3px -47px;}
+/*text-indent:14px; 文字向内缩进14px*/
+.section .video_list li {list-style: none;background: url(../img/dot.gif) no-repeat 2px center;text-indent:14px;white-space: nowrap;}
+.section .video_list a {height: 20px; line-height: 20px; font-size: 13px;color: #000}
+.section .video_list a:hover{text-decoration: underline;}
+
+
+.main_title{height: 40px; line-height: 40px;font-size: 12px;position: relative;}
+.main_title sup { position:absolute; top:-8px; left:20px; }
+.main_title a { position:absolute; top:2px; right:0; }
+.main_title strong { color: #cc0d13;}
+
+
+.hot_list{margin-top: 10px;position: relative;height:368px;}
+.hot_list li{list-style: none;width: 318px;height: 98px; padding-top: 8px; background: url(../img/hot_list_li_bg.gif) no-repeat;}
+.hot_list .img{float: left;width: 106px;height: 86px;}
+.hot_list .img a{display: block; width: 104px;height: 84px;border: 1px solid #e6e6e6}
+.hot_list .img a:hover{border: 1px solid #929292}
+.hot_list .text{float: right;width: 190px;}
+.hot_list h3 {line-height: 24px;font-size: 12px;margin-top: 6px;}
+.hot_list h3 a{font-weight: normal;color: #bb0d0d}
+.hot_list h3 a:hover{text-decoration: underline;}
+.hot_list .text h3{}
+.hot_list p{line-height: 16px;color: #6e6e6e;font-size: 12px;margin-top: 3px;}
+.hot_list_more {position: absolute;bottom: 6px; right: 4px;}
+
+
+.tab {height: 25px;border-bottom: 1px solid #dadada; padding: 0 10px;}
+.tab ul{height: 26px; margin-bottom: -1px;position: relative;}
+.tab li{position: relative;list-style: none; float: left; font-size: 13px;border: 1px solid #dadada; border-radius: 6px 6px 0 0;width:98px ;height: 24px;line-height: 24px; margin-right: -1px;text-align: center;}
+.tab .triangle_down_gray {top: 10px; right: 3px;}
+.tab .triangle_down_red {top: 10px; right: 3px;}
+.tab .active{margin-bottom: -1px;border-bottom: 1px solid #fff; background: #fff;font-weight: bold;}
+
+.section .tab {padding: 10px;}
+.section .tab li {width: 98px;}
+.side_section .tab {padding: 6px;}
+.side_section .tab li {width: 66px;}
+
+
+
 
 
 
